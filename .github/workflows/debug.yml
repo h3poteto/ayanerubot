@@ -1,0 +1,16 @@
+name: Debug
+
+on:
+  push:
+
+jobs:
+  build:
+    name: Debug
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Debug commits
+      run: |
+        echo "${{ toJson(github.event.commits.*.message) }}"
+
