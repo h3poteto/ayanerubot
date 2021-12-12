@@ -12,5 +12,5 @@ jobs:
     - uses: actions/checkout@v2
     - name: Debug commits
       run: |
-        echo "${{ toJson(github.event.commits.*.message) }}"
+        echo "${{ toJson(join(github.event.commits.*.message, ';')) }}"
 
