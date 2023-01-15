@@ -19,7 +19,7 @@ jobs:
           stale-issue-label: "stale"
           debug-only: true
           exempt-all-milestones: true
-          exempt-issue-labels: 'security'
+          exempt-issue-labels: 'InProgress,ToDo'
           exempt-all-assignees: true
           exempt-draft-pr: true
           days-before-issue-stale: 60
