@@ -10,6 +10,6 @@ jobs:
     steps:
       - name: check
         run: |
-          echo "${{ github.event }}"
+          echo "${{ github.event.release }}"
           echo "${{ github.event_name }}"
-          echo "${{ github.event.prerelease }}"
+          echo "${{ github.event.release.prerelease }}"
