@@ -1,0 +1,15 @@
+on:
+  release:
+    types:
+      - published
+
+jobs:
+  release:
+    name: Release
+    runs-on: ubuntu-latest
+    steps:
+      - name: check
+        run: |
+          echo ${{ github.event }}
+          echo ${{ github.event_name }}
+          echo ${{ github.event.prerelease }}
