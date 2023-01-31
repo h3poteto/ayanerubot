@@ -13,3 +13,7 @@ jobs:
           echo "${{ github.event.release }}"
           echo "${{ github.event_name }}"
           echo "${{ github.event.release.prerelease }}"
+      - name: Only release
+        if: github.event_name == 'release' && github.event.release.prerelease == false
+        run: |
+          echo "published!"
